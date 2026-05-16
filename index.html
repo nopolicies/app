@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Lumina AI | Your Intelligent Business Assistant</title>
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>NovaMind | Next-Generation AI Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -15,23 +14,24 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: #fefaf5;
-            color: #2d2a24;
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #1a1f36;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
 
         :root {
-            --warm: #e07a5f;
-            --warm-dark: #c56448;
-            --clay: #d4a373;
-            --sage: #81b29a;
-            --deep: #3d405b;
-            --cream: #fdf8f2;
-            --border-warm: #f0e5dc;
-            --shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.02);
-            --radius: 28px;
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #e0e7ff;
+            --secondary: #ec4899;
+            --dark: #0f172a;
+            --gray-50: #f9fafb;
+            --gray-200: #e5e7eb;
+            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            --radius-xl: 28px;
+            --radius-lg: 20px;
         }
 
         .container {
@@ -42,12 +42,12 @@
 
         /* Navigation */
         .navbar {
-            background: rgba(254, 250, 245, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid var(--border-warm);
+            border-bottom: 1px solid var(--gray-200);
         }
 
         .nav-wrapper {
@@ -56,17 +56,17 @@
             align-items: center;
             padding: 1rem 0;
             flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .logo {
-            font-family: 'Clash Display', sans-serif;
-            font-size: 1.9rem;
-            font-weight: 700;
-            color: var(--deep);
-        }
-
-        .logo span {
-            color: var(--warm);
+            font-size: 1.7rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.02em;
         }
 
         .nav-links {
@@ -79,33 +79,49 @@
         .nav-links a {
             text-decoration: none;
             font-weight: 500;
-            color: #5c5a5a;
+            color: #334155;
             transition: 0.2s;
         }
 
         .nav-links a:hover {
-            color: var(--warm);
+            color: var(--primary);
         }
 
-        .btn-warm {
-            border: 1px solid var(--warm);
-            padding: 0.5rem 1.5rem;
-            border-radius: 60px;
-            background: transparent;
+        .btn-primary {
+            background: var(--primary);
+            padding: 0.6rem 1.5rem;
+            border-radius: 100px;
+            color: white;
             font-weight: 600;
-            color: var(--warm);
+            border: none;
+            text-decoration: none;
             transition: 0.2s;
         }
 
-        .btn-warm:hover {
-            background: var(--warm);
-            color: white;
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--gray-200);
+            padding: 0.6rem 1.5rem;
+            border-radius: 100px;
+            background: white;
+            font-weight: 500;
+            text-decoration: none;
+            color: #1a1f36;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            background: var(--primary-light);
         }
 
         /* Hero */
         .hero {
             padding: 5rem 0 6rem;
-            background: linear-gradient(105deg, #fefaf5 0%, #fff8f0 100%);
+            background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
         }
 
         .hero-grid {
@@ -120,43 +136,30 @@
         }
 
         .hero-badge {
-            background: #f0e5dc;
-            color: var(--warm);
-            border-radius: 100px;
-            padding: 0.3rem 1.1rem;
+            background: var(--primary-light);
+            color: var(--primary-dark);
             display: inline-block;
+            border-radius: 100px;
+            padding: 0.3rem 1rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            font-size: 0.75rem;
             margin-bottom: 1.5rem;
         }
 
         .hero-content h1 {
-            font-family: 'Clash Display', sans-serif;
-            font-size: 3.6rem;
-            font-weight: 700;
+            font-size: 3.5rem;
+            font-weight: 800;
             line-height: 1.2;
             letter-spacing: -0.02em;
-            color: var(--deep);
             margin-bottom: 1.2rem;
+            color: #0f172a;
         }
 
         .hero-content p {
             font-size: 1.2rem;
-            color: #6b6a6a;
+            color: #475569;
             max-width: 90%;
             margin-bottom: 2rem;
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .stat-item h3 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--warm);
         }
 
         .hero-image {
@@ -166,32 +169,32 @@
 
         .hero-image img {
             max-width: 100%;
-            border-radius: 32px;
-            box-shadow: 0 25px 40px -15px rgba(0, 0, 0, 0.08);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
         }
 
+        /* Sections */
         section {
             padding: 5rem 0;
         }
 
         .section-title {
-            font-family: 'Clash Display', sans-serif;
-            font-size: 2.3rem;
+            font-size: 2.2rem;
             font-weight: 700;
             text-align: center;
             margin-bottom: 1rem;
-            color: var(--deep);
+            color: #0f172a;
         }
 
         .section-sub {
             text-align: center;
-            max-width: 650px;
+            color: #64748b;
+            max-width: 600px;
             margin: 0 auto 3rem;
-            color: #7a7878;
         }
 
-        /* Cards */
-        .cards-grid {
+        /* Features Grid */
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
@@ -199,43 +202,78 @@
 
         .feature-card {
             background: white;
-            border-radius: var(--radius);
+            border-radius: var(--radius-lg);
             padding: 2rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-warm);
+            border: 1px solid var(--gray-200);
             transition: all 0.25s;
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--warm);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-light);
         }
 
         .feature-icon {
             font-size: 2.2rem;
-            color: var(--warm);
+            color: var(--primary);
             margin-bottom: 1.2rem;
         }
 
-        /* Use cases */
-        .use-grid {
-            display: flex;
-            flex-wrap: wrap;
+        /* Blog Cards */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+            transition: 0.25s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .blog-img {
+            background: linear-gradient(135deg, var(--primary-light), #c7d2fe);
+            height: 180px;
+            display: flex;
+            align-items: center;
             justify-content: center;
+            font-size: 3rem;
+            color: var(--primary);
         }
 
-        .use-item {
-            background: var(--cream);
-            border-radius: 24px;
+        .blog-content {
             padding: 1.5rem;
-            text-align: center;
-            flex: 1;
-            min-width: 180px;
-            border: 1px solid var(--border-warm);
         }
 
-        /* Pricing */
+        .blog-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-meta {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-top: 1rem;
+        }
+
+        /* Pricing Cards */
         .pricing-grid {
             display: flex;
             flex-wrap: wrap;
@@ -243,100 +281,140 @@
             justify-content: center;
         }
 
-        .price-card {
+        .pricing-card {
             background: white;
-            border-radius: 28px;
+            border-radius: var(--radius-xl);
             flex: 1;
-            min-width: 260px;
+            min-width: 280px;
             padding: 2rem;
-            border: 1px solid var(--border-warm);
+            border: 1px solid var(--gray-200);
             transition: 0.2s;
+            position: relative;
         }
 
-        .price-card.featured {
-            border-top: 4px solid var(--warm);
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+            box-shadow: var(--shadow-md);
             transform: scale(1.02);
-            box-shadow: 0 12px 24px rgba(224, 122, 95, 0.08);
         }
 
-        .price-amount {
-            font-size: 2.6rem;
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem 1rem;
+            border-radius: 100px;
+            font-weight: 600;
+        }
+
+        .price {
+            font-size: 3rem;
             font-weight: 800;
-            color: var(--warm);
+            color: var(--primary);
             margin: 1rem 0;
         }
 
-        .btn-primary-warm {
-            background: var(--warm);
-            padding: 0.8rem 2rem;
-            border-radius: 60px;
-            color: white;
-            font-weight: 600;
-            display: inline-block;
-            text-decoration: none;
-            transition: 0.2s;
+        .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #64748b;
         }
 
-        .btn-primary-warm:hover {
-            background: var(--warm-dark);
+        .pricing-card ul {
+            list-style: none;
+            margin: 1.5rem 0;
         }
 
-        .cta-warm {
-            background: var(--deep);
-            border-radius: 40px;
+        .pricing-card li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pricing-card li i {
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            border-radius: var(--radius-xl);
             color: white;
             text-align: center;
-            padding: 3rem;
-        }
-
-        /* Privacy */
-        .privacy-card {
-            background: var(--cream);
-            border-radius: 32px;
-            padding: 2.5rem;
+            padding: 3.5rem;
             margin: 2rem 0;
-            border: 1px solid var(--border-warm);
-            scroll-margin-top: 90px;
         }
 
-        .privacy-card h2, .privacy-card h3 {
-            color: var(--deep);
-            margin-top: 1.8rem;
-            font-weight: 700;
+        /* Privacy Policy Block */
+        .privacy-block {
+            background: var(--gray-50);
+            border-radius: var(--radius-xl);
+            padding: 2.5rem;
+            margin: 2rem 0 1rem;
+            border: 1px solid var(--gray-200);
+            scroll-margin-top: 80px;
         }
 
-        .privacy-card p, .privacy-card li {
-            color: #5c5a5a;
+        .privacy-block h2, .privacy-block h3 {
+            color: #0f172a;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
         }
 
+        .privacy-block p, .privacy-block li {
+            color: #475569;
+        }
+
+        .privacy-block ul {
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Footer */
         footer {
-            background: var(--deep);
-            color: #cdc9c0;
+            background: #0f172a;
+            color: #94a3b8;
             padding: 3rem 0 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
         .back-to-top {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            background: var(--warm);
+            background: var(--primary);
             color: white;
-            width: 48px;
-            height: 48px;
-            border-radius: 30px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
             transition: 0.2s;
             z-index: 99;
+            box-shadow: var(--shadow-md);
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 768px) {
+            .container { padding: 0 20px; }
             .hero-content h1 { font-size: 2.3rem; }
-            .nav-wrapper { flex-direction: column; gap: 1rem; }
-            .section-title { font-size: 1.9rem; }
+            .nav-wrapper { flex-direction: column; }
+            .section-title { font-size: 1.8rem; }
+            .pricing-card.featured { transform: none; }
         }
     </style>
 </head>
@@ -344,134 +422,195 @@
 
 <nav class="navbar">
     <div class="container nav-wrapper">
-        <div class="logo">Lumina<span>AI</span></div>
+        <div class="logo"><i class="fas fa-gem"></i> NovaMind</div>
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#features">Features</a>
-            <a href="#use-cases">Use Cases</a>
+            <a href="#blog">Blog</a>
             <a href="#pricing">Pricing</a>
             <a href="#privacy">Privacy</a>
-            <a href="#" class="btn-warm"><i class="fas fa-star"></i> Start free</a>
+            <a href="#" class="btn-primary">Get Started</a>
         </div>
     </div>
 </nav>
 
 <main>
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <div class="hero-badge"><i class="fas fa-sparkles"></i> Your AI co-pilot</div>
-                <h1>The AI assistant that runs your business</h1>
-                <p>Lumina helps you write, research, organize, and automate — so you can focus on what matters. Built for solopreneurs, creators, and small teams.</p>
-                <a href="#" class="btn-primary-warm"><i class="fas fa-magic"></i> Try Lumina free</a>
-                <div class="hero-stats">
-                    <div class="stat-item"><h3>50k+</h3><span>active users</span></div>
-                    <div class="stat-item"><h3>4.9★</h3><span>rating</span></div>
-                    <div class="stat-item"><h3>30+</h3><span>languages</span></div>
-                </div>
+                <div class="hero-badge"><i class="fas fa-brain"></i> AI Revolution 2025</div>
+                <h1>Intelligence that <br>understands your world</h1>
+                <p>NovaMind delivers cutting-edge generative AI, predictive analytics, and autonomous agents — all in one seamless platform.</p>
+                <a href="#" class="btn-primary" style="padding: 0.8rem 2rem;"><i class="fas fa-rocket"></i> Start free trial</a>
+                <div style="margin-top: 1.5rem; font-size: 0.9rem; color: #64748b;">⭐ No credit card required · 14-day free trial</div>
             </div>
             <div class="hero-image">
-                <img src="https://placehold.co/600x500/FEF0E6/e07a5f?text=AI+Assistant+App&font=plus" alt="Lumina AI Assistant">
+                <img src="https://placehold.co/600x500/EEF2FF/6366f1?text=AI+Neural+Network&font=inter" alt="AI Visualization">
             </div>
         </div>
     </section>
 
-    <!-- Features -->
+    <!-- Features Section -->
     <section id="features">
         <div class="container">
-            <h2 class="section-title">Everything you need, one AI</h2>
-            <p class="section-sub">From content creation to task management — Lumina does it all</p>
-            <div class="cards-grid">
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-pen-fancy"></i></div><h3>Writing & Content</h3><p>Blog posts, emails, social media, scripts — generate high-quality content in seconds.</p></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-search"></i></div><h3>Research & Summaries</h3><p>Summarize articles, extract key insights, and answer complex questions.</p></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-tasks"></i></div><h3>Task Automation</h3><p>Connect to your calendar, email, and CRM — automate repetitive work.</p></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-brain"></i></div><h3>Smart Memory</h3><p>Lumina remembers your preferences and learns your style over time.</p></div>
+            <h2 class="section-title">Built for the future of work</h2>
+            <p class="section-sub">Everything you need to harness the power of artificial intelligence</p>
+            <div class="features-grid">
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-robot"></i></div><h3>Autonomous Agents</h3><p>Deploy AI agents that handle complex tasks, from research to customer support.</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><h3>Real-time Analytics</h3><p>Get instant insights from your data with our predictive ML engine.</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-language"></i></div><h3>Multimodal LLM</h3><p>Process text, images, and audio with state-of-the-art foundation models.</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-shield-alt"></i></div><h3>Enterprise Security</h3><p>GDPR compliant, end-to-end encryption, and private deployment options.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Use Cases -->
-    <section id="use-cases">
+    <!-- Blog Section -->
+    <section id="blog">
         <div class="container">
-            <h2 class="section-title">Trusted by creators everywhere</h2>
-            <div class="use-grid">
-                <div class="use-item"><i class="fas fa-blog" style="font-size: 2rem; color:#e07a5f;"></i><h3 style="margin: 0.8rem 0 0.3rem;">Bloggers</h3><p>Content ideas & drafts</p></div>
-                <div class="use-item"><i class="fas fa-chart-simple" style="font-size: 2rem; color:#e07a5f;"></i><h3 style="margin: 0.8rem 0 0.3rem;">Marketers</h3><p>Campaign copy & SEO</p></div>
-                <div class="use-item"><i class="fas fa-laptop-code" style="font-size: 2rem; color:#e07a5f;"></i><h3 style="margin: 0.8rem 0 0.3rem;">Developers</h3><p>Code & documentation</p></div>
-                <div class="use-item"><i class="fas fa-graduation-cap" style="font-size: 2rem; color:#e07a5f;"></i><h3 style="margin: 0.8rem 0 0.3rem;">Students</h3><p>Research & studying</p></div>
+            <h2 class="section-title">Latest from our blog</h2>
+            <p class="section-sub">Insights, research, and updates from the world of AI</p>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-img"><i class="fas fa-newspaper"></i></div>
+                    <div class="blog-content">
+                        <div class="blog-tag">Research</div>
+                        <h3>How LLMs are reshaping enterprise workflows</h3>
+                        <p>Exploring real-world applications of large language models in Fortune 500 companies.</p>
+                        <div class="blog-meta"><i class="far fa-calendar"></i> May 15, 2025 · 6 min read</div>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-img"><i class="fas fa-chart-simple"></i></div>
+                    <div class="blog-content">
+                        <div class="blog-tag">Tutorial</div>
+                        <h3>Building your first AI agent with NovaMind API</h3>
+                        <p>Step-by-step guide to creating custom autonomous agents in under 10 minutes.</p>
+                        <div class="blog-meta"><i class="far fa-calendar"></i> May 10, 2025 · 4 min read</div>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-img"><i class="fas fa-scale-balanced"></i></div>
+                    <div class="blog-content">
+                        <div class="blog-tag">Ethics</div>
+                        <h3>Responsible AI: Balancing innovation and privacy</h3>
+                        <p>How we're building ethical safeguards into every model we deploy.</p>
+                        <div class="blog-meta"><i class="far fa-calendar"></i> May 5, 2025 · 8 min read</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing -->
+    <!-- Pricing Section -->
     <section id="pricing">
         <div class="container">
             <h2 class="section-title">Simple, transparent pricing</h2>
+            <p class="section-sub">Choose the plan that fits your needs — upgrade or downgrade anytime</p>
             <div class="pricing-grid">
-                <div class="price-card"><h3>Free</h3><div class="price-amount">$0</div><p>50 messages/month, basic features, community support.</p><a href="#" class="btn-primary-warm" style="margin-top:1.5rem; display:inline-block;">Get started</a></div>
-                <div class="price-card featured"><h3>Pro <span style="background:#f0e5dc; font-size:0.7rem; padding:0.2rem 0.6rem; border-radius:40px;">⭐ Most popular</span></h3><div class="price-amount">$15<span style="font-size:1rem;">/mo</span></div><p>Unlimited messages, advanced memory, priority support.</p><a href="#" class="btn-primary-warm">Upgrade to Pro</a></div>
-                <div class="price-card"><h3>Team</h3><div class="price-amount">$39<span style="font-size:1rem;">/mo</span></div><p>5 seats, shared memory, admin tools, API access.</p><a href="#" class="btn-primary-warm">Contact us</a></div>
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$29<span>/month</span></div>
+                    <p>Perfect for individuals and small teams</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 10,000 API calls/month</li>
+                        <li><i class="fas fa-check"></i> Core LLM access</li>
+                        <li><i class="fas fa-check"></i> Community support</li>
+                        <li><i class="fas fa-check"></i> Basic analytics</li>
+                    </ul>
+                    <a href="#" class="btn-outline" style="display: block; text-align: center;">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">🔥 Most Popular</div>
+                    <h3>Pro</h3>
+                    <div class="price">$79<span>/month</span></div>
+                    <p>For growing businesses and power users</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 100,000 API calls/month</li>
+                        <li><i class="fas fa-check"></i> Advanced models + vision</li>
+                        <li><i class="fas fa-check"></i> Priority support (24/7)</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics & export</li>
+                        <li><i class="fas fa-check"></i> Custom fine-tuning</li>
+                    </ul>
+                    <a href="#" class="btn-primary" style="display: block; text-align: center;">Start Free Trial</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <p>For large organizations with scale needs</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Unlimited API calls</li>
+                        <li><i class="fas fa-check"></i> On-premise deployment</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        <li><i class="fas fa-check"></i> Custom SLA & compliance</li>
+                        <li><i class="fas fa-check"></i> SOC2 / HIPAA ready</li>
+                    </ul>
+                    <a href="#" class="btn-outline" style="display: block; text-align: center;">Contact Sales</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA Banner -->
     <div class="container">
-        <div class="cta-warm">
-            <h2 style="font-size: 2rem; font-family: 'Clash Display';">Start working smarter with Lumina</h2>
-            <p style="margin: 1rem 0 2rem; opacity: 0.85;">Join thousands who've already supercharged their workflow.</p>
-            <a href="#" class="btn-primary-warm" style="background: white; color: #3d405b;"><i class="fas fa-play"></i> Try for free →</a>
+        <div class="cta-section">
+            <h2 style="font-size: 1.8rem;">Ready to transform your business with AI?</h2>
+            <p style="margin: 1rem 0 1.5rem; opacity: 0.9;">Join 5,000+ companies already using NovaMind.</p>
+            <a href="#" class="btn-primary" style="background: white; color: #0f172a;"><i class="fas fa-arrow-right"></i> Get started today</a>
         </div>
     </div>
 
-    <!-- Privacy Policy -->
+    <!-- Privacy Policy Section (full, standard) -->
     <div class="container" id="privacy">
-        <div class="privacy-card">
-            <h2 style="margin-top:0;"><i class="fas fa-heart" style="color:#e07a5f;"></i> Privacy Policy</h2>
-            <p><strong>Last updated:</strong> May 2025 | Lumina AI is committed to protecting your personal data and respecting your privacy.</p>
+        <div class="privacy-block">
+            <h2 style="margin-top: 0;"><i class="fas fa-shield-alt" style="color: var(--primary);"></i> Privacy Policy</h2>
+            <p><strong>Effective Date:</strong> April 1, 2025 | <strong>Last Updated:</strong> May 17, 2025</p>
+            <p>At NovaMind ("we," "our," or "us"), your privacy is our priority. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our AI platform, website, and services.</p>
             
-            <h3>1. Information we collect</h3>
-            <p>We collect account information (name, email), conversation history (stored locally and encrypted), usage analytics. You have full control over your data.</p>
+            <h3>1. Information We Collect</h3>
+            <p><strong>Personal Data:</strong> When you register, we collect your name, email address, billing information, and company details. <strong>Usage Data:</strong> Automatically collected information such as IP address, browser type, pages visited, and API request patterns. <strong>AI Interaction Data:</strong> Prompts and responses are processed in real-time and not stored unless you explicitly opt-in for model improvement.</p>
             
-            <h3>2. How we use your information</h3>
-            <p>To provide AI assistance, improve response quality, personalize your experience, and process payments. We do NOT train models on your private conversations without explicit permission.</p>
+            <h3>2. How We Use Your Information</h3>
+            <p>We use your data to provide and improve our services, process payments, personalize your experience, send important updates (security, policy changes), and comply with legal obligations. We never sell your personal data to third parties.</p>
             
-            <h3>3. Data retention & deletion</h3>
-            <p>You can delete your entire chat history at any time. Account data retained until you request deletion. Export available upon request.</p>
+            <h3>3. Data Retention & Security</h3>
+            <p>We retain personal data only as long as necessary. Industry-standard encryption (TLS 1.3, AES-256) protects data in transit and at rest. Access is strictly limited to authorized personnel with regular security audits.</p>
             
-            <h3>4. Third-party sharing</h3>
-            <p>We use secure infrastructure providers (AWS, OpenAI API). No personal data is sold or shared for advertising purposes.</p>
+            <h3>4. Third-Party Services</h3>
+            <p>We use trusted partners for cloud infrastructure (AWS, GCP), payment processing (Stripe), and analytics (Plausible — privacy-friendly). All partners comply with GDPR/CCPA requirements.</p>
             
-            <h3>5. Your rights (GDPR / CCPA)</h3>
-            <p>Access, correction, deletion, restriction, portability. Email <strong>privacy@lumina.ai</strong>. You may also opt out of any data collection beyond essential service.</p>
+            <h3>5. Your Privacy Rights (GDPR / CCPA)</h3>
+            <p>Depending on your location, you have the right to access, correct, delete, or restrict processing of your data, as well as data portability. To exercise rights, email <strong>privacy@novamind.ai</strong>. You may also opt out of marketing communications at any time.</p>
             
-            <h3>6. Security measures</h3>
-            <p>Encryption at rest and in transit, regular security audits, and strict access controls.</p>
+            <h3>6. Cookies & Tracking</h3>
+            <p>We use essential cookies for authentication and functional purposes. No invasive tracking. You can manage cookie preferences via your browser settings.</p>
             
-            <h3>7. Children's privacy</h3>
-            <p>Lumina is intended for users 16+. We do not knowingly collect data from minors.</p>
+            <h3>7. Children's Privacy</h3>
+            <p>Our services are not directed to individuals under 16. We do not knowingly collect data from minors. If you become aware, please contact us.</p>
             
-            <h3>8. International transfers</h3>
-            <p>Data may be processed globally with appropriate safeguards (Standard Contractual Clauses).</p>
+            <h3>8. International Data Transfers</h3>
+            <p>Data may be processed in the US, EU, or other jurisdictions. We implement Standard Contractual Clauses (SCCs) to ensure adequate protection.</p>
             
-            <h3>9. Policy updates & contact</h3>
-            <p>Material changes will be communicated via email. Data Protection Officer: <strong>dpo@lumina.ai</strong>. Address: 101 Creative Loop, Portland, OR 97204.</p>
-            <p style="margin-top:1rem;"><i class="fas fa-leaf" style="color:#81b29a;"></i> Lumina AI — Your privacy is our priority.</p>
+            <h3>9. Changes to This Policy</h3>
+            <p>We may update this Privacy Policy periodically. Material changes will be notified via email or prominent notice on our website.</p>
+            
+            <p><strong>Contact Us:</strong> For privacy-related inquiries, contact our Data Protection Officer at <strong>dpo@novamind.ai</strong> or mail: NovaMind Privacy, 42 AI Avenue, San Francisco, CA 94105.</p>
+            <p style="margin-top: 1rem;"><i class="fas fa-check-circle" style="color: var(--primary);"></i> NovaMind is committed to transparent and ethical AI.</p>
         </div>
     </div>
 </main>
 
+<!-- Footer -->
 <footer>
     <div class="container">
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
-            <div><h3 style="color:white;">Lumina<span style="color:#e07a5f;">AI</span></h3><p>Your intelligent business assistant</p><div style="margin-top:0.8rem;"><i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-discord"></i> © 2025</div></div>
-            <div><h4>Product</h4><p>Features<br>Pricing<br>API<br>Download</p></div>
-            <div><h4>Resources</h4><p>Blog<br>Help Center<br>Community<br>Roadmap</p></div>
-            <div><h4>Legal</h4><p><a href="#privacy" style="color:#cdc9c0; text-decoration:none;">Privacy Policy</a><br>Terms of Service<br>Security<br>GDPR</p></div>
+        <div class="footer-grid">
+            <div><h3 style="color: white;">NovaMind</h3><p>AI for the intelligent era.</p><div style="margin-top: 1rem;"><i class="fab fa-twitter"></i> <i class="fab fa-github"></i> <i class="fab fa-linkedin"></i> <i class="fab fa-discord"></i></div></div>
+            <div><h4>Product</h4><p><a href="#features" style="color: #94a3b8; text-decoration: none;">Features</a><br><a href="#pricing" style="color: #94a3b8; text-decoration: none;">Pricing</a><br>API Docs<br>Status</p></div>
+            <div><h4>Resources</h4><p><a href="#blog" style="color: #94a3b8; text-decoration: none;">Blog</a><br>Research Papers<br>Support Center<br>Community</p></div>
+            <div><h4>Legal</h4><p><a href="#privacy" style="color: #94a3b8; text-decoration: none;">Privacy Policy</a><br>Terms of Service<br>Cookie Policy<br>Security</p></div>
         </div>
-        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid #5a5a6e; margin-top: 2rem; font-size: 0.8rem;">
-            Lumina AI — Empowering creators with intelligent automation.
+        <div style="border-top: 1px solid #334155; padding-top: 1.5rem; text-align: center; font-size: 0.8rem;">
+            © 2025 NovaMind — Democratizing artificial intelligence for everyone.
         </div>
     </div>
 </footer>
