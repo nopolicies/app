@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>NovaMind | Next-Generation AI Platform</title>
+    <title>Zephyr AI · Intelligent Enterprise Platform</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -16,22 +16,26 @@
         body {
             font-family: 'Inter', sans-serif;
             background: #ffffff;
-            color: #1a1f36;
+            color: #1a1a1a;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
 
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --primary-light: #e0e7ff;
-            --secondary: #ec4899;
-            --dark: #0f172a;
-            --gray-50: #f9fafb;
-            --gray-200: #e5e7eb;
-            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-            --radius-xl: 28px;
-            --radius-lg: 20px;
+            --peach: #f97316;
+            --peach-dark: #ea580c;
+            --peach-soft: #fed7aa;
+            --peach-bg: #fff7ed;
+            --peach-lightest: #fffbeb;
+            --gray-bg: #fafaf9;
+            --card-white: #ffffff;
+            --border: #e7e5e4;
+            --text-dark: #0c0a09;
+            --text-muted: #57534e;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
+            --radius: 28px;
+            --radius-sm: 18px;
         }
 
         .container {
@@ -42,12 +46,12 @@
 
         /* Navigation */
         .navbar {
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(255,255,255,0.96);
             backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid var(--gray-200);
         }
 
         .nav-wrapper {
@@ -60,13 +64,13 @@
         }
 
         .logo {
-            font-size: 1.7rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -0.02em;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .logo span {
+            color: var(--peach);
         }
 
         .nav-links {
@@ -79,49 +83,51 @@
         .nav-links a {
             text-decoration: none;
             font-weight: 500;
-            color: #334155;
+            color: var(--text-muted);
             transition: 0.2s;
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--peach);
         }
 
         .btn-primary {
-            background: var(--primary);
+            background: var(--peach);
             padding: 0.6rem 1.5rem;
             border-radius: 100px;
             color: white;
             font-weight: 600;
-            border: none;
             text-decoration: none;
             transition: 0.2s;
+            border: none;
+            display: inline-block;
         }
 
         .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
+            background: var(--peach-dark);
+            transform: translateY(-1px);
         }
 
         .btn-outline {
-            border: 1px solid var(--gray-200);
+            border: 1px solid var(--border);
             padding: 0.6rem 1.5rem;
             border-radius: 100px;
             background: white;
             font-weight: 500;
             text-decoration: none;
-            color: #1a1f36;
+            color: var(--text-dark);
+            display: inline-block;
         }
 
         .btn-outline:hover {
-            border-color: var(--primary);
-            background: var(--primary-light);
+            border-color: var(--peach);
+            background: var(--peach-lightest);
         }
 
         /* Hero */
         .hero {
-            padding: 5rem 0 6rem;
-            background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--peach-bg) 0%, #ffffff 60%);
         }
 
         .hero-grid {
@@ -136,30 +142,51 @@
         }
 
         .hero-badge {
-            background: var(--primary-light);
-            color: var(--primary-dark);
-            display: inline-block;
+            background: var(--peach-soft);
+            color: var(--peach-dark);
             border-radius: 100px;
-            padding: 0.3rem 1rem;
-            font-size: 0.8rem;
+            padding: 0.25rem 1rem;
+            font-size: 0.75rem;
             font-weight: 600;
+            display: inline-block;
             margin-bottom: 1.5rem;
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
+            font-size: 3.2rem;
+            font-weight: 700;
             line-height: 1.2;
             letter-spacing: -0.02em;
             margin-bottom: 1.2rem;
-            color: #0f172a;
+            color: var(--text-dark);
+        }
+
+        .hero-highlight {
+            color: var(--peach);
         }
 
         .hero-content p {
-            font-size: 1.2rem;
-            color: #475569;
+            font-size: 1.1rem;
+            color: var(--text-muted);
             max-width: 90%;
             margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--peach);
+        }
+
+        .stat-item span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
 
         .hero-image {
@@ -169,8 +196,8 @@
 
         .hero-image img {
             max-width: 100%;
-            border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-md);
+            border-radius: var(--radius);
+            background: #e7e5e4;
         }
 
         /* Sections */
@@ -179,16 +206,16 @@
         }
 
         .section-title {
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 700;
             text-align: center;
             margin-bottom: 1rem;
-            color: #0f172a;
+            color: var(--text-dark);
         }
 
         .section-sub {
             text-align: center;
-            color: #64748b;
+            color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto 3rem;
         }
@@ -201,23 +228,33 @@
         }
 
         .feature-card {
-            background: white;
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            border: 1px solid var(--gray-200);
-            transition: all 0.25s;
+            background: var(--card-white);
+            border-radius: var(--radius-sm);
+            padding: 1.8rem;
+            border: 1px solid var(--border);
+            transition: 0.2s;
         }
 
         .feature-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-3px);
             box-shadow: var(--shadow-md);
-            border-color: var(--primary-light);
+            border-color: var(--peach-soft);
         }
 
         .feature-icon {
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 1.2rem;
+            font-size: 2rem;
+            color: var(--peach);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
         /* Blog Cards */
@@ -228,26 +265,27 @@
         }
 
         .blog-card {
-            background: white;
-            border-radius: var(--radius-lg);
+            background: var(--card-white);
+            border-radius: var(--radius-sm);
             overflow: hidden;
-            border: 1px solid var(--gray-200);
-            transition: 0.25s;
+            border: 1px solid var(--border);
+            transition: 0.2s;
         }
 
         .blog-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             box-shadow: var(--shadow-md);
+            border-color: var(--peach-soft);
         }
 
         .blog-img {
-            background: linear-gradient(135deg, var(--primary-light), #c7d2fe);
-            height: 180px;
+            background: var(--peach-lightest);
+            height: 160px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: var(--primary);
+            font-size: 2.5rem;
+            color: var(--peach);
         }
 
         .blog-content {
@@ -258,22 +296,27 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
+            color: var(--peach);
+            letter-spacing: 0.5px;
         }
 
         .blog-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+            margin: 0.5rem 0;
+        }
+
+        .blog-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
         }
 
         .blog-meta {
-            font-size: 0.8rem;
-            color: #94a3b8;
+            font-size: 0.75rem;
+            color: var(--text-muted);
             margin-top: 1rem;
         }
 
-        /* Pricing Cards */
+        /* Pricing */
         .pricing-grid {
             display: flex;
             flex-wrap: wrap;
@@ -282,45 +325,31 @@
         }
 
         .pricing-card {
-            background: white;
-            border-radius: var(--radius-xl);
+            background: var(--card-white);
+            border-radius: var(--radius);
             flex: 1;
             min-width: 280px;
             padding: 2rem;
-            border: 1px solid var(--gray-200);
+            border: 1px solid var(--border);
             transition: 0.2s;
-            position: relative;
         }
 
         .pricing-card.featured {
-            border: 2px solid var(--primary);
+            border-top: 3px solid var(--peach);
             box-shadow: var(--shadow-md);
-            transform: scale(1.02);
-        }
-
-        .popular-badge {
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: var(--primary);
-            color: white;
-            font-size: 0.7rem;
-            padding: 0.2rem 1rem;
-            border-radius: 100px;
-            font-weight: 600;
         }
 
         .price {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--peach);
             margin: 1rem 0;
         }
 
         .price span {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 400;
-            color: #64748b;
+            color: var(--text-muted);
         }
 
         .pricing-card ul {
@@ -333,46 +362,61 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            font-size: 0.9rem;
         }
 
         .pricing-card li i {
-            color: var(--primary);
-            font-size: 0.9rem;
+            color: var(--peach);
+            font-size: 0.8rem;
         }
 
         /* CTA */
         .cta-section {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            border-radius: var(--radius-xl);
-            color: white;
+            background: var(--peach-bg);
+            border-radius: var(--radius);
             text-align: center;
-            padding: 3.5rem;
+            padding: 3rem;
             margin: 2rem 0;
+            border: 1px solid var(--peach-soft);
         }
 
-        /* Privacy Policy Block */
+        .cta-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .cta-section .btn-primary {
+            margin-top: 1rem;
+        }
+
+        /* Privacy */
         .privacy-block {
-            background: var(--gray-50);
-            border-radius: var(--radius-xl);
-            padding: 2.5rem;
-            margin: 2rem 0 1rem;
-            border: 1px solid var(--gray-200);
+            background: var(--card-white);
+            border-radius: var(--radius-sm);
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
             scroll-margin-top: 80px;
         }
 
         .privacy-block h2, .privacy-block h3 {
-            color: #0f172a;
+            color: var(--text-dark);
             margin-top: 1.5rem;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .privacy-block h2:first-child {
+            margin-top: 0;
         }
 
         .privacy-block p, .privacy-block li {
-            color: #475569;
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
         .privacy-block ul {
-            padding-left: 1.5rem;
-            margin: 0.5rem 0;
+            padding-left: 1.2rem;
         }
 
         /* Footer */
@@ -385,36 +429,57 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
+        }
+
+        .footer-grid h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid a, .footer-grid p {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-grid a:hover {
+            color: var(--peach);
         }
 
         .back-to-top {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            background: var(--primary);
+            background: var(--peach);
             color: white;
-            width: 46px;
-            height: 46px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            opacity: 0.8;
             transition: 0.2s;
             z-index: 99;
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .back-to-top:hover {
+            background: var(--peach-dark);
+            transform: translateY(-2px);
         }
 
         @media (max-width: 768px) {
             .container { padding: 0 20px; }
-            .hero-content h1 { font-size: 2.3rem; }
+            .hero-content h1 { font-size: 2.2rem; }
             .nav-wrapper { flex-direction: column; }
-            .section-title { font-size: 1.8rem; }
-            .pricing-card.featured { transform: none; }
+            .section-title { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -422,14 +487,14 @@
 
 <nav class="navbar">
     <div class="container nav-wrapper">
-        <div class="logo"><i class="fas fa-gem"></i> NovaMind</div>
+        <div class="logo">Zephyr<span>AI</span></div>
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#features">Features</a>
             <a href="#blog">Blog</a>
             <a href="#pricing">Pricing</a>
             <a href="#privacy">Privacy</a>
-            <a href="#" class="btn-primary">Get Started</a>
+            <a href="#" class="btn-primary">Get started</a>
         </div>
     </div>
 </nav>
@@ -439,14 +504,18 @@
     <section id="home" class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <div class="hero-badge"><i class="fas fa-brain"></i> AI Revolution 2025</div>
-                <h1>Intelligence that <br>understands your world</h1>
-                <p>NovaMind delivers cutting-edge generative AI, predictive analytics, and autonomous agents — all in one seamless platform.</p>
-                <a href="#" class="btn-primary" style="padding: 0.8rem 2rem;"><i class="fas fa-rocket"></i> Start free trial</a>
-                <div style="margin-top: 1.5rem; font-size: 0.9rem; color: #64748b;">⭐ No credit card required · 14-day free trial</div>
+                <div class="hero-badge">Enterprise AI · Autonomous Platform</div>
+                <h1>Intelligence that <span class="hero-highlight">adapts</span> to your world</h1>
+                <p>Deploy custom LLMs, autonomous agents, and predictive analytics on a secure, scalable infrastructure built for modern enterprises.</p>
+                <a href="#" class="btn-primary">Start free trial →</a>
+                <div class="hero-stats">
+                    <div class="stat-item"><h3>99.99%</h3><span>Uptime SLA</span></div>
+                    <div class="stat-item"><h3>4B+</h3><span>API calls</span></div>
+                    <div class="stat-item"><h3>600+</h3><span>enterprises</span></div>
+                </div>
             </div>
             <div class="hero-image">
-                <img src="https://placehold.co/600x500/EEF2FF/6366f1?text=AI+Neural+Network&font=inter" alt="AI Visualization">
+                <img src="https://placehold.co/550x450/1c1917/ffffff?text=AI+Platform&font=inter" alt="Zephyr AI platform">
             </div>
         </div>
     </section>
@@ -454,13 +523,13 @@
     <!-- Features Section -->
     <section id="features">
         <div class="container">
-            <h2 class="section-title">Built for the future of work</h2>
-            <p class="section-sub">Everything you need to harness the power of artificial intelligence</p>
+            <h2 class="section-title">Built for production AI</h2>
+            <p class="section-sub">Everything you need to build, deploy, and scale machine learning models</p>
             <div class="features-grid">
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-robot"></i></div><h3>Autonomous Agents</h3><p>Deploy AI agents that handle complex tasks, from research to customer support.</p></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><h3>Real-time Analytics</h3><p>Get instant insights from your data with our predictive ML engine.</p></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-language"></i></div><h3>Multimodal LLM</h3><p>Process text, images, and audio with state-of-the-art foundation models.</p></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-shield-alt"></i></div><h3>Enterprise Security</h3><p>GDPR compliant, end-to-end encryption, and private deployment options.</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-microchip"></i></div><h3>LLM Fine-tuning</h3><p>Customize foundation models with your proprietary data and domain expertise.</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-network-wired"></i></div><h3>Agent Orchestration</h3><p>Build multi-agent systems that collaborate on complex workflows.</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><h3>Predictive Analytics</h3><p>Forecast trends, detect anomalies, and optimize operations with 94% accuracy.</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-shield-alt"></i></div><h3>Enterprise Security</h3><p>GDPR, SOC2 Type II, HIPAA-ready with end-to-end encryption.</p></div>
             </div>
         </div>
     </section>
@@ -468,34 +537,34 @@
     <!-- Blog Section -->
     <section id="blog">
         <div class="container">
-            <h2 class="section-title">Latest from our blog</h2>
-            <p class="section-sub">Insights, research, and updates from the world of AI</p>
+            <h2 class="section-title">Latest insights</h2>
+            <p class="section-sub">Research, engineering, and AI trends from our team</p>
             <div class="blog-grid">
                 <div class="blog-card">
-                    <div class="blog-img"><i class="fas fa-newspaper"></i></div>
+                    <div class="blog-img"><i class="fas fa-file-alt"></i></div>
                     <div class="blog-content">
-                        <div class="blog-tag">Research</div>
-                        <h3>How LLMs are reshaping enterprise workflows</h3>
-                        <p>Exploring real-world applications of large language models in Fortune 500 companies.</p>
-                        <div class="blog-meta"><i class="far fa-calendar"></i> May 15, 2025 · 6 min read</div>
+                        <div class="blog-tag">Engineering</div>
+                        <h3>Building reliable RAG systems at scale</h3>
+                        <p>Lessons learned from production deployments across 50+ enterprises.</p>
+                        <div class="blog-meta">May 20, 2025 · 6 min read</div>
                     </div>
                 </div>
                 <div class="blog-card">
                     <div class="blog-img"><i class="fas fa-chart-simple"></i></div>
                     <div class="blog-content">
-                        <div class="blog-tag">Tutorial</div>
-                        <h3>Building your first AI agent with NovaMind API</h3>
-                        <p>Step-by-step guide to creating custom autonomous agents in under 10 minutes.</p>
-                        <div class="blog-meta"><i class="far fa-calendar"></i> May 10, 2025 · 4 min read</div>
+                        <div class="blog-tag">Research</div>
+                        <h3>New benchmarks for agentic evaluation</h3>
+                        <p>How we measure real-world agent performance and reliability.</p>
+                        <div class="blog-meta">May 15, 2025 · 8 min read</div>
                     </div>
                 </div>
                 <div class="blog-card">
-                    <div class="blog-img"><i class="fas fa-scale-balanced"></i></div>
+                    <div class="blog-img"><i class="fas fa-lock"></i></div>
                     <div class="blog-content">
-                        <div class="blog-tag">Ethics</div>
-                        <h3>Responsible AI: Balancing innovation and privacy</h3>
-                        <p>How we're building ethical safeguards into every model we deploy.</p>
-                        <div class="blog-meta"><i class="far fa-calendar"></i> May 5, 2025 · 8 min read</div>
+                        <div class="blog-tag">Security</div>
+                        <h3>LLM security: prompt injection and guardrails</h3>
+                        <p>Best practices for securing production AI systems.</p>
+                        <div class="blog-meta">May 10, 2025 · 5 min read</div>
                     </div>
                 </div>
             </div>
@@ -505,97 +574,96 @@
     <!-- Pricing Section -->
     <section id="pricing">
         <div class="container">
-            <h2 class="section-title">Simple, transparent pricing</h2>
-            <p class="section-sub">Choose the plan that fits your needs — upgrade or downgrade anytime</p>
+            <h2 class="section-title">Flexible plans</h2>
+            <p class="section-sub">Start free, scale as you grow. No hidden fees.</p>
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price">$29<span>/month</span></div>
-                    <p>Perfect for individuals and small teams</p>
+                    <h3>Developer</h3>
+                    <div class="price">$0<span>/month</span></div>
+                    <p>10K API calls, community support</p>
                     <ul>
-                        <li><i class="fas fa-check"></i> 10,000 API calls/month</li>
-                        <li><i class="fas fa-check"></i> Core LLM access</li>
+                        <li><i class="fas fa-check"></i> 10K API calls/month</li>
+                        <li><i class="fas fa-check"></i> Core models access</li>
                         <li><i class="fas fa-check"></i> Community support</li>
                         <li><i class="fas fa-check"></i> Basic analytics</li>
                     </ul>
-                    <a href="#" class="btn-outline" style="display: block; text-align: center;">Get Started</a>
+                    <a href="#" class="btn-outline" style="display: block; text-align: center;">Get started</a>
                 </div>
                 <div class="pricing-card featured">
-                    <div class="popular-badge">🔥 Most Popular</div>
                     <h3>Pro</h3>
                     <div class="price">$79<span>/month</span></div>
-                    <p>For growing businesses and power users</p>
+                    <p>500K API calls, priority support</p>
                     <ul>
-                        <li><i class="fas fa-check"></i> 100,000 API calls/month</li>
-                        <li><i class="fas fa-check"></i> Advanced models + vision</li>
-                        <li><i class="fas fa-check"></i> Priority support (24/7)</li>
-                        <li><i class="fas fa-check"></i> Advanced analytics & export</li>
+                        <li><i class="fas fa-check"></i> 500K API calls/month</li>
+                        <li><i class="fas fa-check"></i> Advanced models</li>
+                        <li><i class="fas fa-check"></i> Priority 24/7 support</li>
                         <li><i class="fas fa-check"></i> Custom fine-tuning</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
                     </ul>
-                    <a href="#" class="btn-primary" style="display: block; text-align: center;">Start Free Trial</a>
+                    <a href="#" class="btn-primary" style="display: block; text-align: center;">Start trial</a>
                 </div>
                 <div class="pricing-card">
                     <h3>Enterprise</h3>
                     <div class="price">Custom</div>
-                    <p>For large organizations with scale needs</p>
+                    <p>Unlimited, on-prem, dedicated support</p>
                     <ul>
                         <li><i class="fas fa-check"></i> Unlimited API calls</li>
-                        <li><i class="fas fa-check"></i> On-premise deployment</li>
-                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
-                        <li><i class="fas fa-check"></i> Custom SLA & compliance</li>
-                        <li><i class="fas fa-check"></i> SOC2 / HIPAA ready</li>
+                        <li><i class="fas fa-check"></i> On-prem / VPC deployment</li>
+                        <li><i class="fas fa-check"></i> Custom SLA</li>
+                        <li><i class="fas fa-check"></i> Dedicated support team</li>
+                        <li><i class="fas fa-check"></i> SOC2 / HIPAA compliant</li>
                     </ul>
-                    <a href="#" class="btn-outline" style="display: block; text-align: center;">Contact Sales</a>
+                    <a href="#" class="btn-outline" style="display: block; text-align: center;">Contact sales</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Banner -->
+    <!-- CTA Section -->
     <div class="container">
         <div class="cta-section">
-            <h2 style="font-size: 1.8rem;">Ready to transform your business with AI?</h2>
-            <p style="margin: 1rem 0 1.5rem; opacity: 0.9;">Join 5,000+ companies already using NovaMind.</p>
-            <a href="#" class="btn-primary" style="background: white; color: #0f172a;"><i class="fas fa-arrow-right"></i> Get started today</a>
+            <h2>Ready to transform with AI?</h2>
+            <p style="opacity: 0.8;">Join 600+ enterprises already using Zephyr AI.</p>
+            <a href="#" class="btn-primary">Start free trial →</a>
         </div>
     </div>
 
-    <!-- Privacy Policy Section (full, standard) -->
+    <!-- Privacy Policy Section -->
     <div class="container" id="privacy">
         <div class="privacy-block">
-            <h2 style="margin-top: 0;"><i class="fas fa-shield-alt" style="color: var(--primary);"></i> Privacy Policy</h2>
-            <p><strong>Effective Date:</strong> April 1, 2025 | <strong>Last Updated:</strong> May 17, 2025</p>
-            <p>At NovaMind ("we," "our," or "us"), your privacy is our priority. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our AI platform, website, and services.</p>
+            <h2><i class="fas fa-shield-alt" style="color: var(--peach);"></i> Privacy Policy</h2>
+            <p><strong>Effective Date:</strong> May 2025 | <strong>Last Updated:</strong> May 21, 2025</p>
+            <p>At Zephyr AI ("we," "our"), your privacy is fundamental to our mission. This Privacy Policy explains how we handle your information.</p>
             
             <h3>1. Information We Collect</h3>
-            <p><strong>Personal Data:</strong> When you register, we collect your name, email address, billing information, and company details. <strong>Usage Data:</strong> Automatically collected information such as IP address, browser type, pages visited, and API request patterns. <strong>AI Interaction Data:</strong> Prompts and responses are processed in real-time and not stored unless you explicitly opt-in for model improvement.</p>
+            <p><strong>Account Data:</strong> Name, email address, billing information, and account preferences. <strong>Usage Data:</strong> API request logs, model inputs/outputs metadata, and feature usage patterns. <strong>Feedback:</strong> Optional survey responses and support communications.</p>
             
             <h3>2. How We Use Your Information</h3>
-            <p>We use your data to provide and improve our services, process payments, personalize your experience, send important updates (security, policy changes), and comply with legal obligations. We never sell your personal data to third parties.</p>
+            <p>To provide and maintain our Service, improve model accuracy and platform performance, process payments, send important updates, and comply with legal obligations. We never sell your personal data to third parties.</p>
             
             <h3>3. Data Retention & Security</h3>
-            <p>We retain personal data only as long as necessary. Industry-standard encryption (TLS 1.3, AES-256) protects data in transit and at rest. Access is strictly limited to authorized personnel with regular security audits.</p>
+            <p>We retain personal data for as long as your account is active. You may delete your account at any time. Industry-standard encryption (TLS 1.3, AES-256) protects data in transit and at rest.</p>
             
             <h3>4. Third-Party Services</h3>
-            <p>We use trusted partners for cloud infrastructure (AWS, GCP), payment processing (Stripe), and analytics (Plausible — privacy-friendly). All partners comply with GDPR/CCPA requirements.</p>
+            <p>We use trusted partners for cloud infrastructure (AWS, Google Cloud), payment processing (Stripe), and analytics. All partners comply with GDPR/CCPA requirements.</p>
             
             <h3>5. Your Privacy Rights (GDPR / CCPA)</h3>
-            <p>Depending on your location, you have the right to access, correct, delete, or restrict processing of your data, as well as data portability. To exercise rights, email <strong>privacy@novamind.ai</strong>. You may also opt out of marketing communications at any time.</p>
+            <p>You have the right to access, correct, delete, or restrict processing of your data. Contact <strong>privacy@zephyr.ai</strong> to exercise these rights.</p>
             
             <h3>6. Cookies & Tracking</h3>
-            <p>We use essential cookies for authentication and functional purposes. No invasive tracking. You can manage cookie preferences via your browser settings.</p>
+            <p>We use essential cookies for authentication. No invasive tracking. You can manage cookie preferences via your browser.</p>
             
             <h3>7. Children's Privacy</h3>
-            <p>Our services are not directed to individuals under 16. We do not knowingly collect data from minors. If you become aware, please contact us.</p>
+            <p>Our services are not directed to individuals under 16. We do not knowingly collect data from minors.</p>
             
             <h3>8. International Data Transfers</h3>
-            <p>Data may be processed in the US, EU, or other jurisdictions. We implement Standard Contractual Clauses (SCCs) to ensure adequate protection.</p>
+            <p>Data may be processed in the US, EU, or other jurisdictions. We implement Standard Contractual Clauses (SCCs) for international transfers.</p>
             
             <h3>9. Changes to This Policy</h3>
-            <p>We may update this Privacy Policy periodically. Material changes will be notified via email or prominent notice on our website.</p>
+            <p>We may update this Privacy Policy periodically. Material changes will be notified via email or on our website.</p>
             
-            <p><strong>Contact Us:</strong> For privacy-related inquiries, contact our Data Protection Officer at <strong>dpo@novamind.ai</strong> or mail: NovaMind Privacy, 42 AI Avenue, San Francisco, CA 94105.</p>
-            <p style="margin-top: 1rem;"><i class="fas fa-check-circle" style="color: var(--primary);"></i> NovaMind is committed to transparent and ethical AI.</p>
+            <p><strong>Contact Us:</strong> Data Protection Officer at <strong>dpo@zephyr.ai</strong> or mail: Zephyr AI, 101 Tech Hub, San Francisco, CA 94105.</p>
+            <p style="margin-top: 1rem;"><i class="fas fa-check-circle" style="color: var(--peach);"></i> Zephyr AI — building responsible intelligence.</p>
         </div>
     </div>
 </main>
@@ -604,19 +672,19 @@
 <footer>
     <div class="container">
         <div class="footer-grid">
-            <div><h3 style="color: white;">NovaMind</h3><p>AI for the intelligent era.</p><div style="margin-top: 1rem;"><i class="fab fa-twitter"></i> <i class="fab fa-github"></i> <i class="fab fa-linkedin"></i> <i class="fab fa-discord"></i></div></div>
-            <div><h4>Product</h4><p><a href="#features" style="color: #94a3b8; text-decoration: none;">Features</a><br><a href="#pricing" style="color: #94a3b8; text-decoration: none;">Pricing</a><br>API Docs<br>Status</p></div>
-            <div><h4>Resources</h4><p><a href="#blog" style="color: #94a3b8; text-decoration: none;">Blog</a><br>Research Papers<br>Support Center<br>Community</p></div>
-            <div><h4>Legal</h4><p><a href="#privacy" style="color: #94a3b8; text-decoration: none;">Privacy Policy</a><br>Terms of Service<br>Cookie Policy<br>Security</p></div>
+            <div><h4>Zephyr<span style="color:#f97316;">AI</span></h4><p>Enterprise AI platform</p><div style="margin-top:0.5rem;">© 2025</div></div>
+            <div><h4>Product</h4><p><a href="#features">Features</a></p><p><a href="#pricing">Pricing</a></p><p>API Docs</p><p>Status</p></div>
+            <div><h4>Resources</h4><p><a href="#blog">Blog</a></p><p>Documentation</p><p>Support</p><p>Community</p></div>
+            <div><h4>Legal</h4><p><a href="#privacy">Privacy Policy</a></p><p>Terms of Service</p><p>Security</p><p>Compliance</p></div>
         </div>
-        <div style="border-top: 1px solid #334155; padding-top: 1.5rem; text-align: center; font-size: 0.8rem;">
-            © 2025 NovaMind — Democratizing artificial intelligence for everyone.
+        <div style="border-top: 1px solid #334155; padding-top: 1.5rem; text-align: center; font-size: 0.75rem;">
+            Built for the enterprise. Trusted by industry leaders.
         </div>
     </div>
 </footer>
 
 <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
-<script src="protection.js"></script>
+
 <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
